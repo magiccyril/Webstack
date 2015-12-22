@@ -1,0 +1,9 @@
+######################
+#       Helena       #
+######################
+mysql_helena:
+  environment:
+  - MYSQL_ROOT_PASSWORD=
+  - MYSQL_DATABASE=Helena
+  - MYSQL_USER=
+  - MYSQL_PASSWORD=

@@ -8,7 +8,7 @@ mysql_data_helena:
   - /home/vagrant/data-mysql:/var/lib/mysql
   command: /bin/true
 # Mysql
-mysql:
+mysql_helena:
   image: mariadb
   volumes_from:
   - mysql_data_helena
@@ -22,4 +22,4 @@ mysql:
 # Link to PHP
 php:
   links:
-  - mysql:mysql_helena
+  - mysql_helena:mysql_helena
