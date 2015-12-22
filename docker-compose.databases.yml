@@ -1,0 +1,22 @@
+# Webstack Mysql data
+mysql_data:
+  image: ubuntu
+  volumes:
+  - /home/vagrant/data-mysql:/var/lib/mysql
+  command: /bin/true
+# Webstack Mysql
+mysql:
+  image: mariadb
+  volumes_from:
+  - mysql_data
+  ports:
+   - "3306:3306"
+  environment:
+  - MYSQL_ROOT_PASSWORD=password
+  - MYSQL_DATABASE=dbname
+  - MYSQL_USER=dbuser
+  - MYSQL_PASSWORD=dbpass
+# Webstack PHP
+php:
+  links:
+  - mysql:webstack_mysql
