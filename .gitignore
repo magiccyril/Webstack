@@ -1,2 +1,2 @@
 .DS_Store
-.docker-compose.prod.yml
+docker-compose.prod.yml
