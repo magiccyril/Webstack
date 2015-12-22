@@ -1,22 +1,25 @@
-# Webstack Mysql data
-mysql_data:
+######################
+#       Helena       #
+######################
+# Data
+mysql_data_helena:
   image: ubuntu
   volumes:
   - /home/vagrant/data-mysql:/var/lib/mysql
   command: /bin/true
-# Webstack Mysql
+# Mysql
 mysql:
   image: mariadb
   volumes_from:
-  - mysql_data
+  - mysql_data_helena
   ports:
    - "3306:3306"
   environment:
-  - MYSQL_ROOT_PASSWORD=password
-  - MYSQL_DATABASE=dbname
-  - MYSQL_USER=dbuser
-  - MYSQL_PASSWORD=dbpass
-# Webstack PHP
+  - MYSQL_ROOT_PASSWORD=
+  - MYSQL_DATABASE=Helena
+  - MYSQL_USER=
+  - MYSQL_PASSWORD=
+# Link to PHP
 php:
   links:
-  - mysql:webstack_mysql
+  - mysql:mysql_helena
