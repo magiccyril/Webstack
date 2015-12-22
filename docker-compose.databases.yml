@@ -5,7 +5,7 @@
 mysql_data_helena:
   image: ubuntu
   volumes:
-  - /home/vagrant/data-helena-mysql:/var/lib/mysql
+  - ./data/data-helena-mysql:/var/lib/mysql
   command: /bin/true
 # Mysql
 mysql_helena:
