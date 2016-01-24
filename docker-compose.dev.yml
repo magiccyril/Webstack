@@ -1,0 +1,12 @@
+######################
+#       Helena       #
+######################
+mysql_data_helena:
+  volumes:
+  - /home/vagrant/mysql-data/data-helena-mysql:/var/lib/mysql
+mysql_helena:
+  environment:
+  - MYSQL_ROOT_PASSWORD=root
+  - MYSQL_DATABASE=Helena
+  - MYSQL_USER=dev
+  - MYSQL_PASSWORD=dev
